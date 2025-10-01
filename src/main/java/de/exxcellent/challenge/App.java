@@ -19,7 +19,7 @@ public final class App {
         String dayWithSmallestTempSpread = WeatherTask.DayOfSmallestTemperatureSpread();
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
-        String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
+        String teamWithSmallestGoalSpread = FootballTask.TeamSmallestGoalDistance();
         System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
     }
 }
