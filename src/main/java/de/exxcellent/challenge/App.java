@@ -14,8 +14,6 @@ public final class App {
      */
     public static void main(String... args) {
 
-        // Your preparation code …
-
         String dayWithSmallestTempSpread = WeatherTask.DayOfSmallestTemperatureSpread();
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 

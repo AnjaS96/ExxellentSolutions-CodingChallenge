@@ -5,13 +5,13 @@ import java.util.List;
 
 public interface Calculation {
 
-
     /**
      * @param list1
      * @param list2
-     * @return This method returns a integer list of the absolute difference of the values of list1 and list2
+     * @return This method returns a integer list of the absolute difference of
+     * the values of list1 and list2
      */
-    static List<Integer> CalculateAbsoluteDifferences(List<String> list1, List<String> list2){
+    static List<Integer> CalculateAbsoluteDifferences(List<String> list1, List<String> list2) {
 
         List<Integer> differences = new ArrayList<>();
 
@@ -21,14 +21,14 @@ public interface Calculation {
         }
 
         return differences;
-
     }
 
     /**
      * @param list
-     * @return This method returns the index of the smallest value in the given list
+     * @return This method returns the index of the smallest value in the given
+     * list
      */
-    static int GetSmallestValueIndex(List<Integer> list){
+    static int GetSmallestValueIndex(List<Integer> list) {
 
         int smallestDifference = list.get(0);
         int indexOfSmallestDifference = -1;
@@ -41,7 +41,6 @@ public interface Calculation {
         }
 
         return indexOfSmallestDifference;
-
     }
 
 }
