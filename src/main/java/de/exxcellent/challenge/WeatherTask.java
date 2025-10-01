@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherTask {
-    private final String pathWeatherFile = "src\\main\\resources\\de\\exxcellent\\challenge\\weather.csv";
-    private List<Integer> temperatureSpreads = new ArrayList<>();
+    private static final String pathWeatherFile = "ExxellentSolution-CodingChallenge\\src\\main\\resources\\de\\exxcellent\\challenge\\weather.csv";
+    private static  List<Integer> temperatureSpreads = new ArrayList<>();
 
     /**
      * This function calculates the temperature spreads between the minimum
      * and maximum temperature and writes the results into the list "temperatureSpreads"
      */
-    private void CalculateTemperatureSpreads() {
+    private static void CalculateTemperatureSpreads() {
         List<String> minTemp = new ArrayList<>(CSVParser.ReadCSVFileColumn(pathWeatherFile,"MnT"));
         List<String> maxTemp = new ArrayList<>(CSVParser.ReadCSVFileColumn(pathWeatherFile,"MxT"));
 
@@ -26,7 +26,7 @@ public class WeatherTask {
      * @return This function identifies the index of the smallest temperature spread
      * of the list "temperatureSpread" and returns the day
      */
-    public String DayOfSmallestTemperatureSpread() {
+    public static String DayOfSmallestTemperatureSpread() {
         List<String> dayList = new ArrayList<>(CSVParser.ReadCSVFileColumn(pathWeatherFile,"Day"));
 
         CalculateTemperatureSpreads();
