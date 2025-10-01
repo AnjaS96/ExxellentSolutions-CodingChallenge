@@ -22,8 +22,26 @@ public class WeatherTask {
     }
 
 
+    /**
+     * @return This function identifies the index of the smallest temperature spread
+     * of the list "temperatureSpread" and returns the day
+     */
     public String DayOfSmallestTemperatureSpread() {
-        return "";
+        List<String> dayList = new ArrayList<>(CSVParser.ReadCSVFileColumn(pathWeatherFile,"Day"));
+
+        CalculateTemperatureSpreads();
+
+        int smallestTemperatureSpread = temperatureSpreads.get(0);
+        int indexDaySmallesTempSpread = -1;
+
+        for (int i = 0; i < temperatureSpreads.size() - 1; i++) {
+            if (temperatureSpreads.get(i) < smallestTemperatureSpread) {
+                smallestTemperatureSpread = temperatureSpreads.get(i);
+                indexDaySmallesTempSpread = i;
+            }
+        }
+
+        return dayList.get(indexDaySmallesTempSpread);
     }
 
 
